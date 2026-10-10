@@ -1,0 +1,69 @@
+/* BASE BUTTON */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 26px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+/* PRIMARY BUTTON COLORS */
+
+.button-primary-color-1 {
+    background: var(--main-primary-color-green-1);
+    color: var(--light-primary-text);
+}
+
+.button-primary-color-2 {
+    background: var(--main-primary-color-green-5);
+    color: var(--main-primary-color-green-1);
+}
+
+.button-primary-color-3 {
+    background: var(--other-primary-background);
+    color: var(--main-primary-color-green-1);
+    border: 1px solid var(--main-primary-color-green-1);
+}
+
+
+/* SECONDARY BUTTON COLORS */
+.button-secondary-color-1 {
+    background: var(--main-secondary-color-yellow-1);
+    color: var(--light-primary-text);
+}
+
+.button-secondary-color-2 {
+    background: var(--main-secondary-color-yellow-5);
+    color: var(--main-secondary-color-yellow-1);
+}
+
+.button-secondary-color-3 {
+    background: var(--other-primary-background);
+    color: var(--main-secondary-color-yellow-1);
+    border: 1px solid var(--main-secondary-color-yellow-1);
+}  
+
+
+/* TERTIARY BUTTON COLORS */
+.button-tertiary-color-1 {
+    background: var(--greyscale-400);
+    color: var(--greyscale-700);
+}
+
+.button-tertiary-color-2 {
+    background: var(--greyscale-300);
+    color: var(--greyscale-700);
+}
+
+.button-tertiary-color-3 {
+    background: var(--greyscale-200);
+    color: var(--greyscale-700);
+    border: 1px solid var(--greyscale-700);
+}

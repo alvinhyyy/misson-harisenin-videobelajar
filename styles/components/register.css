@@ -1,0 +1,98 @@
+.register-page {
+    background: var(--other-warm-background);
+}
+
+.register-main {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.register-card {
+    max-width: 436px;
+    padding: 26px;
+    border-radius: 4px;
+}
+
+.register-heading {
+    margin-bottom: 28px;
+}
+
+.register-card .login-field {
+    margin-bottom: 12px;
+}
+
+.register-card .login-field label {
+    margin-bottom: 3px;
+}
+
+.register-card .login-field input {
+    height: 36px;
+}
+
+.register-card .forgot-password {
+    margin: -2px 0 18px;
+}
+
+.register-card .login-action,
+.register-card .login-google {
+    min-height: 32px;
+    padding: 6px 18px;
+}
+
+.register-card .login-divider {
+    margin: 16px 0;
+}
+
+.phone-input-group {
+    display: grid;
+    grid-template-columns: 116px minmax(0, 1fr);
+    gap: 16px;
+}
+
+.phone-country {
+    position: relative;
+}
+
+.indonesia-flag {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    z-index: 1;
+    width: 19px;
+    height: 12px;
+    background: var(--indonesia-flag-gradient);
+    box-shadow: 0 0 0 1px var(--greyscale-300);
+    pointer-events: none;
+}
+
+.phone-country select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 36px;
+    padding: 0 8px 0 37px;
+    border: 1px solid var(--greyscale-300);
+    border-radius: 6px;
+    background: var(--other-primary-background);
+    color: var(--dark-primary-text);
+}
+
+.phone-country select:focus {
+    outline: 2px solid var(--main-primary-color-green-1);
+    outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+    .register-main {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .register-card {
+        padding: 24px 20px;
+    }
+
+    .phone-input-group {
+        grid-template-columns: 104px minmax(0, 1fr);
+        gap: 10px;
+    }
+}

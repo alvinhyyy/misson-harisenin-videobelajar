@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Akun | videobelajar</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="login-page register-page">
+    <header>
+        <nav class="navbar" aria-label="Navigasi utama">
+            <div class="navbar-container">
+                <a href="beranda.html" class="navbar-logo" aria-label="Beranda videobelajar">
+                    <img src="assets/Logo.png" alt="videobelajar" class="navbar-logo-image">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="login-main register-main">
+        <section class="login-card register-card" aria-labelledby="register-title">
+            <div class="login-heading register-heading">
+                <h1 id="register-title" class="heading-4">Pendaftaran Akun</h1>
+                <p class="body-small-regular login-description">Yuk, daftarkan akunmu sekarang juga!</p>
+            </div>
+
+            <form class="login-form" method="post">
+                <div class="login-field">
+                    <label for="full-name">Nama Lengkap <span class="required-mark" aria-hidden="true">*</span></label>
+                    <input id="full-name" name="full-name" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="login-field">
+                    <label for="register-email">E-Mail <span class="required-mark" aria-hidden="true">*</span></label>
+                    <input id="register-email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="login-field">
+                    <label for="phone">No. HP <span class="required-mark" aria-hidden="true">*</span></label>
+                    <div class="phone-input-group">
+                        <div class="phone-country">
+                            <span class="indonesia-flag" aria-hidden="true"></span>
+                            <select name="country-code" aria-label="Kode negara">
+                                <option value="+62">+62</option>
+                            </select>
+                        </div>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel-national" inputmode="tel" required>
+                    </div>
+                </div>
+
+                <div class="login-field">
+                    <label for="register-password">Kata Sandi <span class="required-mark" aria-hidden="true">*</span></label>
+                    <input id="register-password" name="password" type="password" autocomplete="new-password" required>
+                </div>
+
+                <div class="login-field">
+                    <label for="confirm-password">Konfirmasi Kata Sandi <span class="required-mark" aria-hidden="true">*</span></label>
+                    <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required>
+                </div>
+
+                <span class="forgot-password">Lupa Password?</span>
+                <button class="button button-primary-color-1 login-action" type="submit">Daftar</button>
+            </form>
+
+            <a class="button button-primary-color-2 login-action register-link" href="login.html">Masuk</a>
+
+            <div class="login-divider"><span>atau</span></div>
+
+            <div class="button login-google">
+                <span class="google-mark" aria-hidden="true">G</span>
+                Daftar dengan Google
+            </div>
+        </section>
+    </main>
+</body>
+</html>

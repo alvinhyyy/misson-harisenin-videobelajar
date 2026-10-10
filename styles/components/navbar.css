@@ -1,0 +1,33 @@
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--other-primary-background);
+    border-bottom: 1px solid var(--greyscale-300);
+}
+
+.navbar-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100% - 48px, 1200px);
+    height: 80px;
+    margin-inline: auto;
+}
+
+.navbar-logo-image {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .navbar-container {
+        width: min(100% - 32px, 1200px);
+        height: 64px;
+    }
+
+    .navbar-logo-image {
+        width: 120px;
+    }
+}

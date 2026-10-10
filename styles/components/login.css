@@ -1,0 +1,138 @@
+.login-page {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--other-base-background);
+    color: var(--dark-primary-text);
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 81px);
+    padding: 32px 16px;
+    box-sizing: border-box;
+}
+
+.login-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 590px;
+    padding: 32px;
+    border: 1px solid var(--greyscale-300);
+    border-radius: 8px;
+    background: var(--other-primary-background);
+}
+
+.login-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.login-heading h1 {
+    margin: 0 0 8px;
+}
+
+.login-description {
+    margin: 0;
+    color: var(--light-disabled-text);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-field {
+    margin-bottom: 16px;
+}
+
+.login-field label {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: var(--dark-secondary-text);
+}
+
+.required-mark {
+    color: var(--main-tertiary-color-red-1);
+}
+
+.login-field input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid var(--greyscale-300);
+    border-radius: 6px;
+    background: var(--other-primary-background);
+    color: var(--dark-primary-text);
+}
+
+.login-field input:focus {
+    outline: 2px solid var(--main-primary-color-green-1);
+    outline-offset: 2px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin: -4px 0 20px;
+    color: var(--dark-secondary-text);
+}
+
+.login-action {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 42px;
+}
+
+.register-link {
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: var(--dark-secondary-text);
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--greyscale-300);
+}
+
+.login-google {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid var(--greyscale-300);
+    background: var(--other-primary-background);
+    color: var(--dark-secondary-text);
+    cursor: default;
+}
+
+.google-mark {
+    background: var(--google-mark-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: var(--transparent-color);
+}
+
+@media (max-width: 480px) {
+    .login-main {
+        align-items: flex-start;
+        min-height: calc(100vh - 65px);
+        padding: 24px 16px;
+    }
+
+    .login-card {
+        padding: 24px 20px;
+    }
+}
