@@ -3,6 +3,8 @@
 Static Video Belajar website (Register, Login, and Homepage) built with React + Vite.
 The assignment brief is in [`docs/`](docs/).
 
+**Live demo:** https://misson-harisenin-videobelajar.vercel.app
+
 ## Getting Started
 
 ```bash
