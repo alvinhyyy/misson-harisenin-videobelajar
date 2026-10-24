@@ -48,7 +48,7 @@
 --overlay-dark : rgba(0, 0, 0, 0.68);
 --transparent-color : transparent;
 
-/* WARNA TANDA GOOGLE DAN BENDERA */
+/* GOOGLE MARK & FLAG */
 --google-mark-gradient : conic-gradient(#4285f4 0 105deg, #34a853 105deg 190deg, #fbbc05 190deg 255deg, #ea4335 255deg 320deg, #4285f4 320deg);
 --indonesia-flag-gradient : linear-gradient(to bottom, #e70011 50%, #fff 50%);
 

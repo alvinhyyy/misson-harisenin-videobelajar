@@ -7,9 +7,10 @@
 @import url('./components/beranda.css');
 
 
-/* GLOBAL FONT */
+/* GLOBAL */
 
 body {
+    margin: 0;
     font-family: 'Lato', sans-serif;
 }
 
@@ -139,7 +140,7 @@ body {
     letter-spacing: 0.2px;
 }
 
-/* FONT LOGIN */
+/* LOGIN FONT */
 
 .login-field label {
     font-size: 14px;
@@ -174,7 +175,7 @@ body {
     font-weight: 900;
 }
 
-/* FONT REGISTER */
+/* REGISTER FONT */
 
 .register-heading .login-description {
     font-size: 12px;
@@ -201,7 +202,7 @@ body {
     font: inherit;
 }
 
-/* FONT BERANDA */
+/* HOME FONT */
 
 .home-nav-category {
     font-size: 16px;

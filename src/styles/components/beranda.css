@@ -103,6 +103,15 @@
     color: var(--main-tertiary-color-red-1);
 }
 
+.course-categories button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
 .category-active::after {
     position: absolute;
     right: 0;
