@@ -1,0 +1,334 @@
+.payment-main {
+    padding: 64px 0;
+}
+
+.payment-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 366px;
+    gap: 36px;
+    align-items: start;
+}
+
+.payment-column {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.payment-card {
+    padding: 24px;
+}
+
+.payment-card > h1,
+.payment-card > h2,
+.order-summary h2 {
+    margin: 0 0 24px;
+}
+
+.payment-card > .block-button {
+    margin-top: 24px;
+}
+
+/* METHOD SELECTOR */
+
+.method-selector,
+.guide-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.method-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.method-group-trigger,
+.method-option,
+.guide {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid var(--greyscale-200);
+    border-radius: 10px;
+    background: var(--other-primary-background);
+}
+
+.method-group-trigger,
+.guide .accordion-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+    padding: 0 20px;
+    border: 0;
+    background: none;
+    color: var(--dark-primary-text);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.method-group-trigger {
+    border: 1px solid var(--greyscale-200);
+}
+
+.method-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 56px;
+    padding: 0 20px;
+    color: var(--dark-primary-text);
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.method-option:hover {
+    background: var(--other-secondary-background);
+}
+
+.method-option-selected {
+    border-color: var(--main-tertiary-color-red-4);
+}
+
+.method-check {
+    margin-left: auto;
+    color: var(--main-tertiary-color-red-1);
+}
+
+.method-logo {
+    display: inline-grid;
+    place-items: center;
+    min-width: 44px;
+    height: 24px;
+    padding: 0 6px;
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--brand) 10%, white);
+    color: var(--brand);
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.method-logo-large {
+    height: auto;
+    padding: 4px 16px;
+    background: none;
+    font-size: 36px;
+}
+
+.card-logos {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-mastercard {
+    display: inline-flex;
+}
+
+.logo-mastercard i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #eb001b;
+}
+
+.logo-mastercard i + i {
+    margin-left: -8px;
+    background: rgba(247, 158, 27, 0.9);
+}
+
+.logo-text {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.logo-jcb {
+    padding: 0 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #0b4ea2 33%, #e21836 33% 66%, #00a651 66%);
+    color: var(--light-primary-text);
+    font-size: 13px;
+}
+
+/* ORDER SUMMARY */
+
+.order-summary dl {
+    margin: 0;
+}
+
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 20px;
+    color: var(--dark-secondary-text);
+    font-size: 18px;
+}
+
+.order-row dd {
+    margin: 0;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.order-total {
+    margin: 0 0 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--greyscale-200);
+    color: var(--dark-primary-text);
+    font-weight: 700;
+}
+
+.order-total dd {
+    color: var(--main-primary-color-green-1);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* VA BOX */
+
+.va-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px;
+    padding: 24px;
+    border: 1px solid var(--greyscale-200);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.va-box p {
+    margin: 0;
+}
+
+.va-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--dark-secondary-text);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.guide {
+    overflow: hidden;
+}
+
+.guide ol {
+    margin: 0;
+    padding: 0 20px 20px 44px;
+    color: var(--dark-secondary-text);
+    line-height: 1.6;
+}
+
+/* COUNTDOWN */
+
+.countdown-banner {
+    background: var(--main-secondary-color-yellow-5);
+    color: var(--dark-primary-text);
+    font-size: 14px;
+}
+
+.countdown-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.countdown-time {
+    display: inline-flex;
+}
+
+.countdown-time b {
+    padding: 0 4px;
+}
+
+.countdown-time time {
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--main-tertiary-color-red-1);
+    color: var(--light-primary-text);
+    font-weight: 700;
+}
+
+/* STATUS */
+
+.status-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 590px;
+    margin: 0 auto;
+    padding: 36px;
+    text-align: center;
+}
+
+.status-card img {
+    width: min(100%, 300px);
+}
+
+.status-card h1 {
+    margin: 12px 0 8px;
+}
+
+.status-card p {
+    max-width: 420px;
+    margin: 0 0 24px;
+    color: var(--dark-secondary-text);
+}
+
+.status-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .payment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-course {
+        order: -1;
+    }
+
+    .payment-course .course-summary-image {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .payment-main {
+        padding: 24px 0 48px;
+    }
+
+    .payment-card {
+        padding: 20px 16px;
+    }
+
+    .order-row {
+        font-size: 15px;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .method-logo-large {
+        font-size: 28px;
+    }
+
+    .status-card {
+        padding: 24px 16px;
+    }
+}

@@ -1,15 +1,28 @@
 const MAX_STARS = 5
 
-function RatingStars({ rating, reviews }) {
-  const filled = Math.floor(rating)
-
+function Star({ fill }) {
   return (
-    <div className="course-rating">
-      <span className="rating-stars" aria-hidden="true">
-        {'★'.repeat(filled)}
-        <span>{'☆'.repeat(MAX_STARS - filled)}</span>
+    <span className="rating-star" aria-hidden="true">
+      ★
+      <span className="rating-star-fill" style={{ width: `${fill * 100}%` }}>★</span>
+    </span>
+  )
+}
+
+function RatingStars({ rating, reviews, showValue = true }) {
+  return (
+    <div className="course-rating" aria-label={`Rating ${rating} dari ${MAX_STARS}`}>
+      <span className="rating-stars">
+        {Array.from({ length: MAX_STARS }, (_, index) => (
+          <Star key={index} fill={Math.max(0, Math.min(1, rating - index))} />
+        ))}
       </span>
-      <span className="rating-count">{rating} ({reviews})</span>
+      {showValue && (
+        <span className="rating-count">
+          {rating}
+          {reviews !== undefined && ` (${reviews})`}
+        </span>
+      )}
     </div>
   )
 }

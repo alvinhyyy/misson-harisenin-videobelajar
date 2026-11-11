@@ -1,31 +1,41 @@
-import Navbar from '../components/layout/Navbar.jsx'
-import Footer from '../components/layout/Footer.jsx'
+import MainLayout from '../components/layout/MainLayout.jsx'
 import HeroBanner from '../components/home/HeroBanner.jsx'
 import CourseSection from '../components/home/CourseSection.jsx'
 import NewsletterBanner from '../components/home/NewsletterBanner.jsx'
-import { ALL_CATEGORY, categories, courses } from '../data/courses.js'
-import { footerColumns, footerInfo, socials } from '../data/footer.js'
-import avatar from '../assets/avatar-navbar.png'
+import Toast from '../components/ui/Toast.jsx'
+import { ALL_CATEGORY, categories } from '../data/courses.js'
+import { useAppStore } from '../store/useAppStore.js'
 import usePageTitle from '../hooks/usePageTitle.js'
+import useToast from '../hooks/useToast.js'
 
 function HomePage() {
   usePageTitle('Beranda')
+  const { courses, addCourse, updateCourse, deleteCourse } = useAppStore()
+  const toast = useToast()
+
+  const handleAdd = (data) => {
+    addCourse(data)
+    toast.show('Kelas baru berhasil ditambahkan')
+  }
+
+  const handleUpdate = (id, data) => {
+    updateCourse(id, data)
+    toast.show('Perubahan kelas berhasil disimpan')
+  }
+
+  const handleDelete = (course) => {
+    deleteCourse(course.id)
+    toast.show(`"${course.title}" telah dihapus`)
+  }
 
   return (
-    <div className="home-page">
-      <Navbar>
-        <div className="home-nav-right">
-          <a href="#courses" className="home-nav-category">Kategori</a>
-          <img className="home-avatar" src={avatar} alt="Profil pengguna" />
-        </div>
-      </Navbar>
-
+    <MainLayout>
       <main className="home-container">
         <HeroBanner
           title="Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!"
           description="Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda."
           ctaLabel="Temukan Video Course untuk Dipelajari!"
-          ctaHref="#courses"
+          ctaTo="/kelas"
         />
 
         <CourseSection
@@ -34,6 +44,9 @@ function HomePage() {
           categories={categories}
           courses={courses}
           allCategory={ALL_CATEGORY}
+          onAdd={handleAdd}
+          onUpdate={handleUpdate}
+          onDelete={handleDelete}
         />
 
         <NewsletterBanner
@@ -42,9 +55,8 @@ function HomePage() {
           description="Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari program-program terbaik videobelajar."
         />
       </main>
-
-      <Footer {...footerInfo} columns={footerColumns} socials={socials} />
-    </div>
+      <Toast message={toast.message} onClose={toast.clear} />
+    </MainLayout>
   )
 }
 
